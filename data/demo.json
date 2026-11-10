@@ -1,0 +1,1056 @@
+{
+  "dataset": "CauSE-Bench",
+  "purpose": "Small demonstration subset; not a new aggregate evaluation.",
+  "samples_count": 8,
+  "classes_count": 8,
+  "models": {
+    "hunyuan": {
+      "display_name": "HunyuanVideo-Foley XXL",
+      "prompt": "",
+      "seed": 42
+    },
+    "foleycrafter": {
+      "display_name": "FoleyCrafter",
+      "prompt": "",
+      "seed": 42
+    },
+    "mmaudio": {
+      "display_name": "MMAudio medium_44k",
+      "prompt": "",
+      "seed": 42
+    },
+    "uniflow_audio": {
+      "display_name": "UniFlow-Audio v1.1-Base",
+      "prompt": "",
+      "seed": 42
+    },
+    "audiox_turbo": {
+      "display_name": "AudioX-Turbo (empty text, 4 steps)",
+      "prompt": "",
+      "seed": 42
+    }
+  },
+  "audio_files": 80,
+  "audio_format": "Original evaluated WAV; no transcoding",
+  "selection_note": "One example in each of eight categories, preserving all selected models and both sides per example. Mix of saved automatic pass/failure patterns; detector not independently calibrated. No new human listening or video acceptance claimed.",
+  "samples": [
+    {
+      "sample_id": "003_dog_barking_3qesirWAGt4",
+      "category": "dog_barking",
+      "source_id": "3qesirWAGt4",
+      "original_dataset": "AVSync15",
+      "original_filename": "3qesirWAGt4_000020_000030_0.0_8.0.mp4",
+      "dataset_relative_path": "videos/dog_barking/3qesirWAGt4_000020_000030_0.0_8.0.mp4",
+      "edited_video_filename": "003_dog_barking_3qesirWAGt4.mp4",
+      "target_interval": [
+        2.8,
+        3.3
+      ],
+      "shared_intervals": [
+        [
+          0.16666666666666666,
+          1.3666666666666667
+        ],
+        [
+          4.466666666666667,
+          5.666666666666667
+        ],
+        [
+          6.3,
+          7.166666666666667
+        ]
+      ],
+      "scored_duration_seconds": 8.0,
+      "video_duration_seconds": 8,
+      "source_time_offset_seconds": 0.0,
+      "suffix_hold_seconds": 0.0,
+      "audio": {
+        "hunyuan": {
+          "positive": "hunyuan/003_dog_barking_3qesirWAGt4/positive.wav",
+          "negative": "hunyuan/003_dog_barking_3qesirWAGt4/negative.wav"
+        },
+        "foleycrafter": {
+          "positive": "foleycrafter/003_dog_barking_3qesirWAGt4/positive.wav",
+          "negative": "foleycrafter/003_dog_barking_3qesirWAGt4/negative.wav"
+        },
+        "mmaudio": {
+          "positive": "mmaudio/003_dog_barking_3qesirWAGt4/positive.wav",
+          "negative": "mmaudio/003_dog_barking_3qesirWAGt4/negative.wav"
+        },
+        "uniflow_audio": {
+          "positive": "uniflow_audio/003_dog_barking_3qesirWAGt4/positive.wav",
+          "negative": "uniflow_audio/003_dog_barking_3qesirWAGt4/negative.wav"
+        },
+        "audiox_turbo": {
+          "positive": "audiox_turbo/003_dog_barking_3qesirWAGt4/positive.wav",
+          "negative": "audiox_turbo/003_dog_barking_3qesirWAGt4/negative.wav"
+        }
+      },
+      "automatic_event_scores": {
+        "hunyuan": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.004584662616252899,
+          "negative_target_score": 0.004163724835962057,
+          "positive_shared_scores": [
+            0.003726088907569647,
+            0.004199776332825422,
+            0.10187964141368866
+          ],
+          "negative_shared_scores": [
+            0.000409212545491755,
+            0.00040203542448580265,
+            0.0019457595190033317
+          ]
+        },
+        "foleycrafter": {
+          "hit": 1,
+          "reject": 0,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.29778069257736206,
+          "negative_target_score": 0.37969961762428284,
+          "positive_shared_scores": [
+            0.07895573228597641,
+            0.36222168803215027,
+            0.04381348192691803
+          ],
+          "negative_shared_scores": [
+            0.05699745938181877,
+            0.24935951828956604,
+            0.03580659627914429
+          ]
+        },
+        "mmaudio": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 1,
+          "cause": 1,
+          "positive_target_score": 0.5881776809692383,
+          "negative_target_score": 0.007438670843839645,
+          "positive_shared_scores": [
+            0.5457736849784851,
+            0.5694445967674255,
+            0.4862624704837799
+          ],
+          "negative_shared_scores": [
+            0.5708287954330444,
+            0.6385118961334229,
+            0.4913076162338257
+          ]
+        },
+        "uniflow_audio": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.6861394643783569,
+          "negative_target_score": 0.002385710831731558,
+          "positive_shared_scores": [
+            0.5923438668251038,
+            0.6259390115737915,
+            0.059160761535167694
+          ],
+          "negative_shared_scores": [
+            0.533405601978302,
+            0.5993508696556091,
+            0.5287302732467651
+          ]
+        },
+        "audiox_turbo": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.0037759817205369473,
+          "negative_target_score": 0.0036122561432421207,
+          "positive_shared_scores": [
+            0.17118100821971893,
+            0.049560703337192535,
+            0.06015763804316521
+          ],
+          "negative_shared_scores": [
+            0.008386455476284027,
+            0.0029362414497882128,
+            0.006516368594020605
+          ]
+        }
+      },
+      "video": {
+        "positive": "demo-media/video/003_dog_barking_3qesirWAGt4/positive.mp4",
+        "negative": "demo-media/video/003_dog_barking_3qesirWAGt4/negative.mp4"
+      },
+      "original_display_source": "3qesirWAGt4_000020.mp4",
+      "original_display_trim_start_seconds": 0.0,
+      "video_note": "Factual display reconstructed from the matching VGGSound source and AVSync15 trim metadata. Original evaluated WAVs are unchanged."
+    },
+    {
+      "sample_id": "001_frog_croaking_hKR3zSW9qLk",
+      "category": "frog_croaking",
+      "source_id": "hKR3zSW9qLk",
+      "original_dataset": "AVSync15",
+      "original_filename": "hKR3zSW9qLk_000020_000030_0.0_6.0.mp4",
+      "dataset_relative_path": "videos/frog_croaking/hKR3zSW9qLk_000020_000030_0.0_6.0.mp4",
+      "edited_video_filename": "001_frog_croaking_hKR3zSW9qLk.mp4",
+      "target_interval": [
+        0.33366700033366703,
+        1.0677344010677345
+      ],
+      "shared_intervals": [
+        [
+          3.2699366032699366,
+          5.672339005672339
+        ]
+      ],
+      "scored_duration_seconds": 6.0060060060060065,
+      "video_duration_seconds": 7,
+      "source_time_offset_seconds": 0.0,
+      "suffix_hold_seconds": 0.9939939939939935,
+      "audio": {
+        "hunyuan": {
+          "positive": "hunyuan/001_frog_croaking_hKR3zSW9qLk/positive.wav",
+          "negative": "hunyuan/001_frog_croaking_hKR3zSW9qLk/negative.wav"
+        },
+        "foleycrafter": {
+          "positive": "foleycrafter/001_frog_croaking_hKR3zSW9qLk/positive.wav",
+          "negative": "foleycrafter/001_frog_croaking_hKR3zSW9qLk/negative.wav"
+        },
+        "mmaudio": {
+          "positive": "mmaudio/001_frog_croaking_hKR3zSW9qLk/positive.wav",
+          "negative": "mmaudio/001_frog_croaking_hKR3zSW9qLk/negative.wav"
+        },
+        "uniflow_audio": {
+          "positive": "uniflow_audio/001_frog_croaking_hKR3zSW9qLk/positive.wav",
+          "negative": "uniflow_audio/001_frog_croaking_hKR3zSW9qLk/negative.wav"
+        },
+        "audiox_turbo": {
+          "positive": "audiox_turbo/001_frog_croaking_hKR3zSW9qLk/positive.wav",
+          "negative": "audiox_turbo/001_frog_croaking_hKR3zSW9qLk/negative.wav"
+        }
+      },
+      "automatic_event_scores": {
+        "hunyuan": {
+          "hit": 0,
+          "reject": 0,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.003038666909560561,
+          "negative_target_score": 0.6301489472389221,
+          "positive_shared_scores": [
+            0.1481959968805313
+          ],
+          "negative_shared_scores": [
+            0.022515853866934776
+          ]
+        },
+        "foleycrafter": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.2127804309129715,
+          "negative_target_score": 0.04330480843782425,
+          "positive_shared_scores": [
+            0.040916990488767624
+          ],
+          "negative_shared_scores": [
+            0.053861379623413086
+          ]
+        },
+        "mmaudio": {
+          "hit": 1,
+          "reject": 0,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.9439231157302856,
+          "negative_target_score": 0.8883393406867981,
+          "positive_shared_scores": [
+            0.020808201283216476
+          ],
+          "negative_shared_scores": [
+            0.011083203367888927
+          ]
+        },
+        "uniflow_audio": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.19108760356903076,
+          "negative_target_score": 0.0010240917326882482,
+          "positive_shared_scores": [
+            0.0012455686228349805
+          ],
+          "negative_shared_scores": [
+            0.005773180164396763
+          ]
+        },
+        "audiox_turbo": {
+          "hit": 1,
+          "reject": 0,
+          "shared": 1,
+          "cause": 0,
+          "positive_target_score": 0.8780429363250732,
+          "negative_target_score": 0.882752001285553,
+          "positive_shared_scores": [
+            0.8571196794509888
+          ],
+          "negative_shared_scores": [
+            0.8951959013938904
+          ]
+        }
+      },
+      "video": {
+        "positive": "demo-media/video/001_frog_croaking_hKR3zSW9qLk/positive.mp4",
+        "negative": "demo-media/video/001_frog_croaking_hKR3zSW9qLk/negative.mp4"
+      },
+      "original_display_source": "hKR3zSW9qLk_000020.mp4",
+      "original_display_trim_start_seconds": 0.0,
+      "video_note": "Factual display reconstructed from the matching VGGSound source and AVSync15 trim metadata. Original evaluated WAVs are unchanged."
+    },
+    {
+      "sample_id": "143_cap_gun_shooting_CJU5llTnYUw",
+      "category": "cap_gun_shooting",
+      "source_id": "CJU5llTnYUw",
+      "original_dataset": "AVSync15",
+      "original_filename": "CJU5llTnYUw_000035_000045_5.0_10.0.mp4",
+      "dataset_relative_path": "videos/cap_gun_shooting/CJU5llTnYUw_000035_000045_5.0_10.0.mp4",
+      "edited_video_filename": "143_cap_gun_shooting_CJU5llTnYUw.mp4",
+      "target_interval": [
+        1.001001001001001,
+        1.3346680013346681
+      ],
+      "shared_intervals": [
+        [
+          4.671338004671338,
+          5.005005005005005
+        ]
+      ],
+      "scored_duration_seconds": 5.005005005005005,
+      "video_duration_seconds": 6,
+      "source_time_offset_seconds": 0.0,
+      "suffix_hold_seconds": 0.994994994994995,
+      "audio": {
+        "hunyuan": {
+          "positive": "hunyuan/143_cap_gun_shooting_CJU5llTnYUw/positive.wav",
+          "negative": "hunyuan/143_cap_gun_shooting_CJU5llTnYUw/negative.wav"
+        },
+        "foleycrafter": {
+          "positive": "foleycrafter/143_cap_gun_shooting_CJU5llTnYUw/positive.wav",
+          "negative": "foleycrafter/143_cap_gun_shooting_CJU5llTnYUw/negative.wav"
+        },
+        "mmaudio": {
+          "positive": "mmaudio/143_cap_gun_shooting_CJU5llTnYUw/positive.wav",
+          "negative": "mmaudio/143_cap_gun_shooting_CJU5llTnYUw/negative.wav"
+        },
+        "uniflow_audio": {
+          "positive": "uniflow_audio/143_cap_gun_shooting_CJU5llTnYUw/positive.wav",
+          "negative": "uniflow_audio/143_cap_gun_shooting_CJU5llTnYUw/negative.wav"
+        },
+        "audiox_turbo": {
+          "positive": "audiox_turbo/143_cap_gun_shooting_CJU5llTnYUw/positive.wav",
+          "negative": "audiox_turbo/143_cap_gun_shooting_CJU5llTnYUw/negative.wav"
+        }
+      },
+      "automatic_event_scores": {
+        "hunyuan": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.019792964681982994,
+          "negative_target_score": 0.0005315697053447366,
+          "positive_shared_scores": [
+            0.017114410176873207
+          ],
+          "negative_shared_scores": [
+            0.028150692582130432
+          ]
+        },
+        "foleycrafter": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 1,
+          "cause": 0,
+          "positive_target_score": 0.0003730583703145385,
+          "negative_target_score": 0.00039907440077513456,
+          "positive_shared_scores": [
+            0.16766257584095
+          ],
+          "negative_shared_scores": [
+            0.24804820120334625
+          ]
+        },
+        "mmaudio": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 1,
+          "cause": 1,
+          "positive_target_score": 0.9397599101066589,
+          "negative_target_score": 0.0046406276524066925,
+          "positive_shared_scores": [
+            0.254181832075119
+          ],
+          "negative_shared_scores": [
+            0.12659740447998047
+          ]
+        },
+        "uniflow_audio": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.0003668047138489783,
+          "negative_target_score": 0.00046583806397393346,
+          "positive_shared_scores": [
+            0.0010973738972097635
+          ],
+          "negative_shared_scores": [
+            0.00194168568123132
+          ]
+        },
+        "audiox_turbo": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.00042826784192584455,
+          "negative_target_score": 0.0003857595438603312,
+          "positive_shared_scores": [
+            0.043655410408973694
+          ],
+          "negative_shared_scores": [
+            0.043806254863739014
+          ]
+        }
+      },
+      "video": {
+        "positive": "demo-media/video/143_cap_gun_shooting_CJU5llTnYUw/positive.mp4",
+        "negative": "demo-media/video/143_cap_gun_shooting_CJU5llTnYUw/negative.mp4"
+      },
+      "original_display_source": "CJU5llTnYUw_000035.mp4",
+      "original_display_trim_start_seconds": 5.0,
+      "video_note": "Factual display reconstructed from the matching VGGSound source and AVSync15 trim metadata. Original evaluated WAVs are unchanged."
+    },
+    {
+      "sample_id": "261_baby_babbling_crying_GhJhxnqgKcc",
+      "category": "baby_babbling_crying",
+      "source_id": "GhJhxnqgKcc",
+      "original_dataset": "AVSync15",
+      "original_filename": "GhJhxnqgKcc_000139_000149_1.0_5.5.mp4",
+      "dataset_relative_path": "videos/baby_babbling_crying/GhJhxnqgKcc_000139_000149_1.0_5.5.mp4",
+      "edited_video_filename": "261_baby_babbling_crying_GhJhxnqgKcc.mp4",
+      "target_interval": [
+        3.3700367033700367,
+        4.037370704037371
+      ],
+      "shared_intervals": [
+        [
+          2.002002002002002,
+          2.7694361027694363
+        ]
+      ],
+      "scored_duration_seconds": 4.504504504504505,
+      "video_duration_seconds": 5,
+      "source_time_offset_seconds": 0.0,
+      "suffix_hold_seconds": 0.4954954954954953,
+      "audio": {
+        "hunyuan": {
+          "positive": "hunyuan/261_baby_babbling_crying_GhJhxnqgKcc/positive.wav",
+          "negative": "hunyuan/261_baby_babbling_crying_GhJhxnqgKcc/negative.wav"
+        },
+        "foleycrafter": {
+          "positive": "foleycrafter/261_baby_babbling_crying_GhJhxnqgKcc/positive.wav",
+          "negative": "foleycrafter/261_baby_babbling_crying_GhJhxnqgKcc/negative.wav"
+        },
+        "mmaudio": {
+          "positive": "mmaudio/261_baby_babbling_crying_GhJhxnqgKcc/positive.wav",
+          "negative": "mmaudio/261_baby_babbling_crying_GhJhxnqgKcc/negative.wav"
+        },
+        "uniflow_audio": {
+          "positive": "uniflow_audio/261_baby_babbling_crying_GhJhxnqgKcc/positive.wav",
+          "negative": "uniflow_audio/261_baby_babbling_crying_GhJhxnqgKcc/negative.wav"
+        },
+        "audiox_turbo": {
+          "positive": "audiox_turbo/261_baby_babbling_crying_GhJhxnqgKcc/positive.wav",
+          "negative": "audiox_turbo/261_baby_babbling_crying_GhJhxnqgKcc/negative.wav"
+        }
+      },
+      "automatic_event_scores": {
+        "hunyuan": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.0001737948477966711,
+          "negative_target_score": 0.00016298129048664123,
+          "positive_shared_scores": [
+            0.046760279685258865
+          ],
+          "negative_shared_scores": [
+            0.050624947994947433
+          ]
+        },
+        "foleycrafter": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 1,
+          "cause": 1,
+          "positive_target_score": 0.15414786338806152,
+          "negative_target_score": 0.04413700848817825,
+          "positive_shared_scores": [
+            0.20527276396751404
+          ],
+          "negative_shared_scores": [
+            0.14448119699954987
+          ]
+        },
+        "mmaudio": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 1,
+          "cause": 1,
+          "positive_target_score": 0.8905909657478333,
+          "negative_target_score": 0.032237302511930466,
+          "positive_shared_scores": [
+            0.6809315085411072
+          ],
+          "negative_shared_scores": [
+            0.8088551759719849
+          ]
+        },
+        "uniflow_audio": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 1,
+          "cause": 1,
+          "positive_target_score": 0.7449606657028198,
+          "negative_target_score": 9.927335486281663e-05,
+          "positive_shared_scores": [
+            0.7386147975921631
+          ],
+          "negative_shared_scores": [
+            0.7510138154029846
+          ]
+        },
+        "audiox_turbo": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.004778028465807438,
+          "negative_target_score": 0.008067804388701916,
+          "positive_shared_scores": [
+            0.018223633989691734
+          ],
+          "negative_shared_scores": [
+            0.0008498239913024008
+          ]
+        }
+      },
+      "video": {
+        "positive": "demo-media/video/261_baby_babbling_crying_GhJhxnqgKcc/positive.mp4",
+        "negative": "demo-media/video/261_baby_babbling_crying_GhJhxnqgKcc/negative.mp4"
+      },
+      "original_display_source": "GhJhxnqgKcc_000139.mp4",
+      "original_display_trim_start_seconds": 1.0,
+      "video_note": "Factual display reconstructed from the matching VGGSound source and AVSync15 trim metadata. Original evaluated WAVs are unchanged."
+    },
+    {
+      "sample_id": "058_lions_roaring_Ck4V96rptIM",
+      "category": "lions_roaring",
+      "source_id": "Ck4V96rptIM",
+      "original_dataset": "AVSync15",
+      "original_filename": "Ck4V96rptIM_000013_000023_0.0_6.5.mp4",
+      "dataset_relative_path": "videos/lions_roaring/Ck4V96rptIM_000013_000023_0.0_6.5.mp4",
+      "edited_video_filename": "058_lions_roaring_Ck4V96rptIM.mp4",
+      "target_interval": [
+        0.0,
+        0.6
+      ],
+      "shared_intervals": [
+        [
+          5.2,
+          6.2
+        ]
+      ],
+      "scored_duration_seconds": 6.52,
+      "video_duration_seconds": 7,
+      "source_time_offset_seconds": 0.0,
+      "suffix_hold_seconds": 0.4800000000000004,
+      "audio": {
+        "hunyuan": {
+          "positive": "hunyuan/058_lions_roaring_Ck4V96rptIM/positive.wav",
+          "negative": "hunyuan/058_lions_roaring_Ck4V96rptIM/negative.wav"
+        },
+        "foleycrafter": {
+          "positive": "foleycrafter/058_lions_roaring_Ck4V96rptIM/positive.wav",
+          "negative": "foleycrafter/058_lions_roaring_Ck4V96rptIM/negative.wav"
+        },
+        "mmaudio": {
+          "positive": "mmaudio/058_lions_roaring_Ck4V96rptIM/positive.wav",
+          "negative": "mmaudio/058_lions_roaring_Ck4V96rptIM/negative.wav"
+        },
+        "uniflow_audio": {
+          "positive": "uniflow_audio/058_lions_roaring_Ck4V96rptIM/positive.wav",
+          "negative": "uniflow_audio/058_lions_roaring_Ck4V96rptIM/negative.wav"
+        },
+        "audiox_turbo": {
+          "positive": "audiox_turbo/058_lions_roaring_Ck4V96rptIM/positive.wav",
+          "negative": "audiox_turbo/058_lions_roaring_Ck4V96rptIM/negative.wav"
+        }
+      },
+      "automatic_event_scores": {
+        "hunyuan": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 1,
+          "cause": 1,
+          "positive_target_score": 0.3164590001106262,
+          "negative_target_score": 0.0019064847147092223,
+          "positive_shared_scores": [
+            0.8690680265426636
+          ],
+          "negative_shared_scores": [
+            0.828340470790863
+          ]
+        },
+        "foleycrafter": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 1,
+          "cause": 0,
+          "positive_target_score": 0.009377450682222843,
+          "negative_target_score": 0.008125247433781624,
+          "positive_shared_scores": [
+            0.45363232493400574
+          ],
+          "negative_shared_scores": [
+            0.39200127124786377
+          ]
+        },
+        "mmaudio": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 1,
+          "cause": 1,
+          "positive_target_score": 0.5385176539421082,
+          "negative_target_score": 0.002242610789835453,
+          "positive_shared_scores": [
+            0.4203442633152008
+          ],
+          "negative_shared_scores": [
+            0.35486799478530884
+          ]
+        },
+        "uniflow_audio": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.7155587077140808,
+          "negative_target_score": 0.0621432289481163,
+          "positive_shared_scores": [
+            0.39117419719696045
+          ],
+          "negative_shared_scores": [
+            0.022974791005253792
+          ]
+        },
+        "audiox_turbo": {
+          "hit": 1,
+          "reject": 0,
+          "shared": 1,
+          "cause": 0,
+          "positive_target_score": 0.23795954883098602,
+          "negative_target_score": 0.2806362211704254,
+          "positive_shared_scores": [
+            0.27344653010368347
+          ],
+          "negative_shared_scores": [
+            0.1938486546278
+          ]
+        }
+      },
+      "video": {
+        "positive": "demo-media/video/058_lions_roaring_Ck4V96rptIM/positive.mp4",
+        "negative": "demo-media/video/058_lions_roaring_Ck4V96rptIM/negative.mp4"
+      },
+      "original_display_source": "Ck4V96rptIM_000013.mp4",
+      "original_display_trim_start_seconds": 0.0,
+      "video_note": "Factual display reconstructed from the matching VGGSound source and AVSync15 trim metadata. Original evaluated WAVs are unchanged."
+    },
+    {
+      "sample_id": "090_sharpen_knife_iWBJxme1d8A",
+      "category": "sharpen_knife",
+      "source_id": "iWBJxme1d8A",
+      "original_dataset": "AVSync15",
+      "original_filename": "iWBJxme1d8A_000042_000052_7.0_10.0.mp4",
+      "dataset_relative_path": "videos/sharpen_knife/iWBJxme1d8A_000042_000052_7.0_10.0.mp4",
+      "edited_video_filename": "090_sharpen_knife_iWBJxme1d8A.mp4",
+      "target_interval": [
+        0.0,
+        0.6673340006673341
+      ],
+      "shared_intervals": [
+        [
+          1.4681348014681348,
+          1.8351685018351687
+        ]
+      ],
+      "scored_duration_seconds": 3.0030030030030033,
+      "video_duration_seconds": 4,
+      "source_time_offset_seconds": 0.0,
+      "suffix_hold_seconds": 0.9969969969969967,
+      "audio": {
+        "hunyuan": {
+          "positive": "hunyuan/090_sharpen_knife_iWBJxme1d8A/positive.wav",
+          "negative": "hunyuan/090_sharpen_knife_iWBJxme1d8A/negative.wav"
+        },
+        "foleycrafter": {
+          "positive": "foleycrafter/090_sharpen_knife_iWBJxme1d8A/positive.wav",
+          "negative": "foleycrafter/090_sharpen_knife_iWBJxme1d8A/negative.wav"
+        },
+        "mmaudio": {
+          "positive": "mmaudio/090_sharpen_knife_iWBJxme1d8A/positive.wav",
+          "negative": "mmaudio/090_sharpen_knife_iWBJxme1d8A/negative.wav"
+        },
+        "uniflow_audio": {
+          "positive": "uniflow_audio/090_sharpen_knife_iWBJxme1d8A/positive.wav",
+          "negative": "uniflow_audio/090_sharpen_knife_iWBJxme1d8A/negative.wav"
+        },
+        "audiox_turbo": {
+          "positive": "audiox_turbo/090_sharpen_knife_iWBJxme1d8A/positive.wav",
+          "negative": "audiox_turbo/090_sharpen_knife_iWBJxme1d8A/negative.wav"
+        }
+      },
+      "automatic_event_scores": {
+        "hunyuan": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.0026257119607180357,
+          "negative_target_score": 0.002218646463006735,
+          "positive_shared_scores": [
+            0.05778439715504646
+          ],
+          "negative_shared_scores": [
+            0.005491513758897781
+          ]
+        },
+        "foleycrafter": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 1,
+          "cause": 1,
+          "positive_target_score": 0.13487684726715088,
+          "negative_target_score": 0.012438232079148293,
+          "positive_shared_scores": [
+            0.6055895686149597
+          ],
+          "negative_shared_scores": [
+            0.53048175573349
+          ]
+        },
+        "mmaudio": {
+          "hit": 0,
+          "reject": 0,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.0006441152072511613,
+          "negative_target_score": 0.19725577533245087,
+          "positive_shared_scores": [
+            0.004805326461791992
+          ],
+          "negative_shared_scores": [
+            0.1943952441215515
+          ]
+        },
+        "uniflow_audio": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.0008198383147828281,
+          "negative_target_score": 0.004748810548335314,
+          "positive_shared_scores": [
+            0.0016662657726556063
+          ],
+          "negative_shared_scores": [
+            0.01031118631362915
+          ]
+        },
+        "audiox_turbo": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.0012503982288762927,
+          "negative_target_score": 0.004111447837203741,
+          "positive_shared_scores": [
+            0.0015865662135183811
+          ],
+          "negative_shared_scores": [
+            0.001541685312986374
+          ]
+        }
+      },
+      "video": {
+        "positive": "demo-media/video/090_sharpen_knife_iWBJxme1d8A/positive.mp4",
+        "negative": "demo-media/video/090_sharpen_knife_iWBJxme1d8A/negative.mp4"
+      },
+      "original_display_source": "iWBJxme1d8A_000042.mp4",
+      "original_display_trim_start_seconds": 7.0,
+      "video_note": "Factual display reconstructed from the matching VGGSound source and AVSync15 trim metadata. Original evaluated WAVs are unchanged."
+    },
+    {
+      "sample_id": "170_hammering_YTbGgxxln6g",
+      "category": "hammering",
+      "source_id": "YTbGgxxln6g",
+      "original_dataset": "AVSync15",
+      "original_filename": "YTbGgxxln6g_000027_000037_0.0_7.0.mp4",
+      "dataset_relative_path": "videos/hammering/YTbGgxxln6g_000027_000037_0.0_7.0.mp4",
+      "edited_video_filename": "170_hammering_YTbGgxxln6g.mp4",
+      "target_interval": [
+        3.3366700033366703,
+        4.337671004337671
+      ],
+      "shared_intervals": [
+        [
+          5.672339005672339,
+          6.339673006339673
+        ]
+      ],
+      "scored_duration_seconds": 7.007007007007007,
+      "video_duration_seconds": 8,
+      "source_time_offset_seconds": 0.0,
+      "suffix_hold_seconds": 0.9929929929929928,
+      "audio": {
+        "hunyuan": {
+          "positive": "hunyuan/170_hammering_YTbGgxxln6g/positive.wav",
+          "negative": "hunyuan/170_hammering_YTbGgxxln6g/negative.wav"
+        },
+        "foleycrafter": {
+          "positive": "foleycrafter/170_hammering_YTbGgxxln6g/positive.wav",
+          "negative": "foleycrafter/170_hammering_YTbGgxxln6g/negative.wav"
+        },
+        "mmaudio": {
+          "positive": "mmaudio/170_hammering_YTbGgxxln6g/positive.wav",
+          "negative": "mmaudio/170_hammering_YTbGgxxln6g/negative.wav"
+        },
+        "uniflow_audio": {
+          "positive": "uniflow_audio/170_hammering_YTbGgxxln6g/positive.wav",
+          "negative": "uniflow_audio/170_hammering_YTbGgxxln6g/negative.wav"
+        },
+        "audiox_turbo": {
+          "positive": "audiox_turbo/170_hammering_YTbGgxxln6g/positive.wav",
+          "negative": "audiox_turbo/170_hammering_YTbGgxxln6g/negative.wav"
+        }
+      },
+      "automatic_event_scores": {
+        "hunyuan": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.14508181810379028,
+          "negative_target_score": 0.0005866619758307934,
+          "positive_shared_scores": [
+            0.04188452661037445
+          ],
+          "negative_shared_scores": [
+            0.2976710796356201
+          ]
+        },
+        "foleycrafter": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.0006165606901049614,
+          "negative_target_score": 0.00046762233250774443,
+          "positive_shared_scores": [
+            0.0005790727445855737
+          ],
+          "negative_shared_scores": [
+            0.0005816496559418738
+          ]
+        },
+        "mmaudio": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.004213572945445776,
+          "negative_target_score": 0.0018394626677036285,
+          "positive_shared_scores": [
+            0.0026145854499191046
+          ],
+          "negative_shared_scores": [
+            0.01650269702076912
+          ]
+        },
+        "uniflow_audio": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 1,
+          "cause": 1,
+          "positive_target_score": 0.1081693097949028,
+          "negative_target_score": 0.026837224140763283,
+          "positive_shared_scores": [
+            0.2627488374710083
+          ],
+          "negative_shared_scores": [
+            0.14135855436325073
+          ]
+        },
+        "audiox_turbo": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.0012209446867927909,
+          "negative_target_score": 0.0015930793015286326,
+          "positive_shared_scores": [
+            0.0005122032598592341
+          ],
+          "negative_shared_scores": [
+            0.005388668272644281
+          ]
+        }
+      },
+      "video": {
+        "positive": "demo-media/video/170_hammering_YTbGgxxln6g/positive.mp4",
+        "negative": "demo-media/video/170_hammering_YTbGgxxln6g/negative.mp4"
+      },
+      "original_display_source": "YTbGgxxln6g_000027.mp4",
+      "original_display_trim_start_seconds": 0.0,
+      "video_note": "Factual display reconstructed from the matching VGGSound source and AVSync15 trim metadata. Original evaluated WAVs are unchanged."
+    },
+    {
+      "sample_id": "971_chicken_crowing_9db_3io8-fE",
+      "category": "chicken_crowing",
+      "source_id": "9db_3io8-fE",
+      "original_dataset": "VGGSound",
+      "original_filename": "9db_3io8-fE_000108.mp4",
+      "dataset_relative_path": "vggsound_03/scratch/shared/beegfs/hchen/train_data/VGGSound_final/video/9db_3io8-fE_000108.mp4",
+      "edited_video_filename": "971_chicken_crowing_9db_3io8-fE.mp4",
+      "target_interval": [
+        0.0,
+        0.6333333333333333
+      ],
+      "shared_intervals": [
+        [
+          7.833333333333333,
+          8.0
+        ]
+      ],
+      "scored_duration_seconds": 10.0,
+      "video_duration_seconds": 10,
+      "source_time_offset_seconds": 0.0,
+      "suffix_hold_seconds": 0.0,
+      "audio": {
+        "hunyuan": {
+          "positive": "hunyuan/971_chicken_crowing_9db_3io8-fE/positive.wav",
+          "negative": "hunyuan/971_chicken_crowing_9db_3io8-fE/negative.wav"
+        },
+        "foleycrafter": {
+          "positive": "foleycrafter/971_chicken_crowing_9db_3io8-fE/positive.wav",
+          "negative": "foleycrafter/971_chicken_crowing_9db_3io8-fE/negative.wav"
+        },
+        "mmaudio": {
+          "positive": "mmaudio/971_chicken_crowing_9db_3io8-fE/positive.wav",
+          "negative": "mmaudio/971_chicken_crowing_9db_3io8-fE/negative.wav"
+        },
+        "uniflow_audio": {
+          "positive": "uniflow_audio/971_chicken_crowing_9db_3io8-fE/positive.wav",
+          "negative": "uniflow_audio/971_chicken_crowing_9db_3io8-fE/negative.wav"
+        },
+        "audiox_turbo": {
+          "positive": "audiox_turbo/971_chicken_crowing_9db_3io8-fE/positive.wav",
+          "negative": "audiox_turbo/971_chicken_crowing_9db_3io8-fE/negative.wav"
+        }
+      },
+      "automatic_event_scores": {
+        "hunyuan": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 1,
+          "cause": 1,
+          "positive_target_score": 0.6825299859046936,
+          "negative_target_score": 0.0006918928120285273,
+          "positive_shared_scores": [
+            0.1890062838792801
+          ],
+          "negative_shared_scores": [
+            0.5982885360717773
+          ]
+        },
+        "foleycrafter": {
+          "hit": 0,
+          "reject": 1,
+          "shared": 0,
+          "cause": 0,
+          "positive_target_score": 0.053382325917482376,
+          "negative_target_score": 0.06805574893951416,
+          "positive_shared_scores": [
+            0.021866826340556145
+          ],
+          "negative_shared_scores": [
+            0.019982704892754555
+          ]
+        },
+        "mmaudio": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 1,
+          "cause": 1,
+          "positive_target_score": 0.720348060131073,
+          "negative_target_score": 0.016440918669104576,
+          "positive_shared_scores": [
+            0.7372926473617554
+          ],
+          "negative_shared_scores": [
+            0.6760590672492981
+          ]
+        },
+        "uniflow_audio": {
+          "hit": 1,
+          "reject": 0,
+          "shared": 1,
+          "cause": 0,
+          "positive_target_score": 0.6437323093414307,
+          "negative_target_score": 0.621700644493103,
+          "positive_shared_scores": [
+            0.7191057801246643
+          ],
+          "negative_shared_scores": [
+            0.7352287769317627
+          ]
+        },
+        "audiox_turbo": {
+          "hit": 1,
+          "reject": 1,
+          "shared": 1,
+          "cause": 1,
+          "positive_target_score": 0.30171364545822144,
+          "negative_target_score": 0.003521616104990244,
+          "positive_shared_scores": [
+            0.6939326524734497
+          ],
+          "negative_shared_scores": [
+            0.6786286234855652
+          ]
+        }
+      },
+      "video": {
+        "positive": "demo-media/video/971_chicken_crowing_9db_3io8-fE/positive.mp4",
+        "negative": "demo-media/video/971_chicken_crowing_9db_3io8-fE/negative.mp4"
+      },
+      "video_note": "Factual display uses an existing aligned derivative. Original evaluated WAVs are unchanged."
+    }
+  ]
+}

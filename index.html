@@ -1,1 +1,67 @@
-test
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CauSE-Bench: Evaluating Selective Sound Generation through Visual Action Deactivation.">
+  <title>CauSE-Bench</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="demo.css">
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>CauSE-Bench</h1>
+      <p class="paper-title">Evaluating Selective Sound Generation through Visual Action Deactivation</p>
+      <p class="authors">Jiahe Lei · Jordan B. L. Smith · Zongyu Yin · Qiuqiang Kong</p>
+      <nav class="paper-btns" aria-label="Paper resources">
+        <a class="btn btn-primary" href="assets/cause-bench-paper.pdf" target="_blank" rel="noopener">Paper</a>
+        <a class="btn" href="https://github.com/shwj114514/audio_eval" target="_blank" rel="noopener">Code</a>
+        <a class="btn" id="dataset-link" role="link" aria-disabled="true" tabindex="-1">Dataset</a>
+        <a class="btn" href="#demos">Video Demos</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section id="results" aria-labelledby="results-title">
+      <h2 class="section-title" id="results-title">Results</h2>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="CauSE-Bench results">
+        <table class="metric-table">
+          <thead>
+            <tr class="groups"><th></th><th colspan="4" scope="colgroup">CauSE metrics (ours, %)</th><th colspan="4" scope="colgroup">Audio metrics</th><th colspan="2" scope="colgroup">AV metrics</th></tr>
+            <tr><th scope="col">Model</th><th scope="col">Hit ↑</th><th scope="col">Reject ↑</th><th scope="col">Keep ↑</th><th scope="col" class="cause">CauSE-Acc ↑</th><th scope="col">FAD ↓</th><th scope="col">FD ↓</th><th scope="col">KL ↓</th><th scope="col">IS ↑</th><th scope="col">IB (%) ↑</th><th scope="col">DeSync (s) ↓</th></tr>
+          </thead>
+          <tbody><tr><th scope="row">Original GT audio</th><td>98.99</td><td>–</td><td><span title="Factual shared-event detection">93.90</span></td><td class="cause">–</td><td>0.000</td><td>0.000</td><td>0.000</td><td>4.835</td><td>41.88</td><td>0.197</td></tr>
+            <tr><th scope="row">Diff-Foley</th><td>34.33</td><td><strong>82.60</strong></td><td>24.22</td><td class="cause">9.52</td><td>7.754</td><td>56.761</td><td>1.772</td><td>4.299</td><td>28.45</td><td>0.955</td></tr>
+            <tr><th scope="row">HunyuanVideo-Foley</th><td>42.43</td><td>81.02</td><td>24.35</td><td class="cause">10.26</td><td>6.977</td><td>52.645</td><td>1.716</td><td>4.094</td><td>29.11</td><td><strong>0.272</strong></td></tr>
+            <tr><th scope="row">FoleyCrafter</th><td>52.58</td><td>53.31</td><td>39.29</td><td class="cause">8.87</td><td>6.481</td><td>50.218</td><td>1.153</td><td>4.117</td><td>36.03</td><td>1.124</td></tr>
+            <tr><th scope="row">MMAudio (medium 44k)</th><td><strong>74.17</strong></td><td>63.21</td><td><strong>56.87</strong></td><td class="cause"><strong>29.43</strong></td><td><strong>2.307</strong></td><td><strong>24.917</strong></td><td><strong>0.554</strong></td><td>4.503</td><td><strong>39.51</strong></td><td>0.274</td></tr>
+            <tr><th scope="row">AudioX-Turbo</th><td>55.69</td><td>63.70</td><td>37.82</td><td class="cause">8.13</td><td>5.535</td><td>34.826</td><td>1.116</td><td><strong>4.847</strong></td><td>33.14</td><td>1.057</td></tr>
+            <tr><th scope="row">UniFlow-Audio (v1.1 Base)</th><td>55.31</td><td>78.81</td><td>32.38</td><td class="cause">14.59</td><td>10.886</td><td>45.533</td><td>1.380</td><td>4.556</td><td>31.56</td><td>0.348</td></tr></tbody>
+        </table>
+      </div>
+      <p class="caption">Table 1. Results on CauSE-Bench. Supplementary metrics are computed on factual outputs only. Best model results are shown in bold; GT is excluded.</p>
+    </section>
+    <section id="demos" aria-labelledby="demos-title">
+      <div class="example-heading">
+        <h2 class="section-title" id="demos-title">Video Demos</h2>
+        <div class="sample-navigation">
+          <button type="button" class="arrow" id="previous" aria-label="Previous sample">←</button>
+          <select id="sample-select" aria-label="Sample"></select>
+          <button type="button" class="arrow" id="next" aria-label="Next sample">→</button>
+        </div>
+      </div>
+      <p class="sample-id" id="sample-id"></p>
+      <p id="load-error" class="error" role="status" hidden></p>
+      <div id="models"></div>
+    </section>
+    <section id="method" class="paper-details" aria-labelledby="benchmark-title">
+      <h2 class="section-title" id="benchmark-title">CauSE-Bench</h2>
+      <p>CauSE-Bench contains 102 factual–counterfactual video pairs across nine sound-event classes. Each edit deactivates one target action while preserving the source, scene, and shared events. CauSE-Acc measures target generation, target suppression, and shared-event retention.</p>
+      <img src="assets/construction.png" loading="lazy" alt="CauSE-Bench construction pipeline and factual–counterfactual example from Figure 1.">
+    </section>
+  </main>
+  <footer class="footer"><div class="container">CauSE-Bench</div></footer>
+</body>
+</html>
