@@ -21,4 +21,4 @@ Sample links use ?sample=<sample_id>.
 - demo-media/: 16 silent videos, 16 posters, and 80 evaluated WAVs.
 - assets/: paper PDF, construction figure, and favicon.
 
-Set releases.dataset in demo.js to the dataset download URL after uploading the ZIP.
+The Dataset button links to the Google Drive archive configured by releases.dataset in demo.js.

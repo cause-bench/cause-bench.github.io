@@ -220,10 +220,11 @@ fetch('data/demo.json').then(response => {
   selectSample(Math.max(0, data.samples.findIndex(sample => sample.sample_id === requested)));
 }).catch(error => { $('load-error').textContent = error.message; $('load-error').hidden = false; });
 
-// Set the dataset download URL here when the archive is published.
-const releases = { dataset: null };
+// Public dataset download.
+const releases = { dataset: 'https://drive.google.com/file/d/1ecrvzJvJ7m6jGFcQMU322XIsTjyfOuJj/view?usp=drive_link' };
 for (const [key, url] of Object.entries(releases)) {
   if (!url) continue;
   const link = $(`${key}-link`); link.href = url;
+  link.target = '_blank'; link.rel = 'noopener noreferrer';
   link.removeAttribute('aria-disabled'); link.removeAttribute('tabindex');
 }
